@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJs Boilerplate
 
-## Getting Started
+Dude! I'm tired of starting NextJS projects from Scratch.
+This boilerplate is designed to streamline your development process, providing you with a solid foundation to kickstart your projects without the hassle of repetitive setup tasks.
 
-First, run the development server:
+> Note: I made this on my prefernces :)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Screenshot of a Boilderplates page](https://raw.githubusercontent.com/ashokasec/nextjs-boilerplate/main/src/components/temp/screenshot.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Processes
+1. __Cleaning__
+   
+   I've removed unnecessary files like `next.svg`, `vercel.svg`, and `favicon.ico` so you can focus on what matters and also cleaned the `page.tsx`. There only a single component there which you can comment or delete without the hassle of scrolling long to delete the unnecessary.
+   
+2.  __Things I Added__
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    - I've installed `framer-motion` and `@tabler/icons-react` packages.
+    - Created a `@/components/Aniamtion/FadeInPage.tsx`, so it becomes easy to Animate on a page load.
+    - Created `@/components/Header/Header.tsx` & `@/components/Footer/Footer.tsx` beacuse its a common thing in every app :)
+    - Created `@/config.ts` where i stored info about branding, nav-items and social links, so its easier to tweak one thing which reflects in whole app.
+      
+      ```
+      export const project = {
+        name: "@ashokasec",
+        link: "https://ashokasec.com",
+        twitter: "https://twitter.com/ashokasec"
+      }
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+      export const navItems = [
+        {
+            text: "Features",
+            link: "/features"
+        },
+        {   
+            text: "Pricing",
+            link: "/pricing"
+        },
+        {
+          text: "Blog",
+          link: "/blog"
+        }
+      ]
+      ```
 
-## Learn More
+    - Added 3 fonts `Inter`, `Space Grotesk` and `Epilogue` and also configured in `tailwind.config.ts`.
+  
+## Setup
 
-To learn more about Next.js, take a look at the following resources:
+  1. Clone the repo
+     
+     ```
+     git clone https://github.com/ashokasec/nextjs-boilerplate frontend
+     ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  3. Install Packages
+     
+     ```
+     cd frontend && npm i
+     ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  5. Enjoyyy.....
